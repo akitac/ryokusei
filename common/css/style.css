@@ -1,0 +1,825 @@
+@charset "UTF-8";
+
+
+body{
+    font-family:"游明朝",YuMincho,"Hiragino Mincho ProN","HG明朝E","MS P明朝","MS 明朝",serif;
+    color:#222222;
+    font-size:1.1rem;
+}
+
+
+/*header---------*/
+
+#sp_nav,#sp_subnav,.sp_mainvisual{
+    display:none;
+}
+
+.header_inner{
+    width:20%;
+    height:100vh;
+    position:fixed;
+    z-index:10000;
+}
+
+.header_nav_contents{
+    width:100%;
+}
+
+
+.header_logo{
+    width:20%;
+    margin:5px
+}
+
+.header_logo img{
+    margin-top:5%;
+    width:90%;
+    align-items:center;
+}
+
+.header_nav{
+    width:60%;
+    margin-left:10px;
+    background-color:rgba(255, 255, 255, 0.8);
+}
+
+.header_nav_item{
+    width:100%;
+    padding:20px 10px 5px;
+    margin-bottom:15px;
+    transition:all .3s;
+}
+
+.header_nav_item:hover{
+    color:#000000;
+}
+
+.header_nav_list{
+    display:flex;
+    justify-content:flex-start;
+    flex-wrap:wrap;
+    flex-direction:column;
+    margin:10px 0;
+}
+
+.header_nav_item{
+    font-family:"ヒラギノ角ゴシック","Hiragino Kaku Gothic ProN","メイリオ","Hiragino Sans",sans-serif;
+    font-weight:300;
+    padding:10px 20px 0;
+    margin-top:10px;
+}
+
+.header_nav_item a{
+    display:block;
+    transition:all .3s;
+    position:relative;
+}
+
+.header_nav_item a::after{
+    content:">";
+    position:absolute;
+    right:0;
+    top:0;
+}
+
+.header_nav_item:nth-child(n+6) a::after{
+    content:none;
+}
+
+
+.header_nav_item a:hover{
+    color:#42ad7c;
+}
+
+
+/*navigation------*/
+
+#nav1,#nav2,#nav3,#nav4,#nav5{
+    position:relative;
+}
+
+.header_nav_item ul{
+    width:150px;
+    position:absolute;
+    left:100%;
+    top:3px;
+}
+
+.hidden{
+    padding:10px 5px;
+    background-color:rgba(66, 173, 124,0.6);
+    border-bottom:1px solid #fff;
+    display:none;
+}
+
+.hidden:last-child{
+    border-bottom:none;
+}
+
+.hidden a::after{
+    content:"";
+}
+
+/*ここまでnavigation---*/
+
+.header_nav_item:last-child{
+    margin-top:0;
+}
+
+.header_nav_item:nth-child(6){
+    margin:30px 0 20px;
+}
+
+.button{
+    padding:10px 20px;
+    background-color:#42ad7c;
+    border:1px solid #fff;
+    color:#fff;
+    font-weight:400;
+    text-align:center;
+    transition:all .8s;
+}
+
+.button:hover{
+    background-color:#e5c15e;
+}
+
+.pic_logo_list{
+    margin-top:20px;
+    margin-left:0;
+    text-align:center;
+}
+
+.pic_logo{
+    display:block;
+    margin:20px 0;
+}
+
+.pic_logo:last-child{
+    padding-left:3px;
+}
+
+.pic_logo img{
+    max-width:30px;
+}
+
+/*検索------------*/
+
+
+.search_wrap{
+    width:100%;
+    margin-left:15px;
+}
+
+.search_wrap input{
+    width:100%;
+}
+
+.search_text{
+    -webkit-appearance:none;
+    padding:10px;
+	background:url("images/search.png") no-repeat;
+    background-position:center left 3%;
+	background-size:20px;
+	transition: all 0.5s;
+	outline:0;
+	cursor: pointer;
+}
+
+ .search_text:focus {
+    margin:0 auto;
+	width:87%;
+	padding: 2px 0 2px 35px;
+    border:1px solid #222222;
+    background-color:rgba(255, 255, 255,0.7);
+    outline:none;
+}
+
+
+
+/*mainvisual------------------*/
+.mainvisual{
+    position:relative;
+    z-index:9000;
+    display:flex;
+    justify-content:flex-end;
+}
+
+.sp_video,.sp_mainvis{
+    display:none;
+}
+
+.video{
+    height:100vh;
+    width:100%;
+    object-fit:cover;
+}
+
+.pc_mainvis{
+    width:70%;
+    background-color:rgba(66, 173, 124,0.4);
+    position:absolute;
+    z-index:10000;
+    color:#fff;
+    text-align:right;
+    margin-top:70vh;
+    padding:20px;
+    font-family: 'Cormorant', serif;
+}
+
+.pc_mainvis h1{
+    font-size:4.0vw;
+}
+
+.mainvisual h1 span{
+    font-size:0.9em;
+}
+
+.mainvisual h1 span::after{
+    content:"since 2022";
+    font-size:0.6em;
+    font-family: 'Montserrat', sans-serif;
+    padding:10px 20px;
+}
+
+/*main contents---------------*/
+
+#main{
+    position:relative;
+    z-index:100;
+}
+
+
+/*pick up---------------------*/
+
+.section_title{
+    text-align:center;
+    margin-top:80px;
+}
+
+.section_title h2{
+    position:relative;
+    color:#42ad7c;
+    font-size:40px;
+    font-weight:50;
+}
+
+.section_title h2::before,.section_title h2::after{
+    content:"";
+    position:absolute;
+    width:20%;
+    height:2px;
+    background-color:#42ad7c;
+    top:32%;
+}
+
+#pickup .section_title h2::before,#pickup .section_title h2::after{
+    width:10%;
+}
+
+#gakubu .section_title h2::before,#gakubu .section_title h2::after{
+    top:50%;
+}
+
+#news .section_title h2::before,#news .section_title h2::after{
+    top:50%;
+}
+
+.section_title h2::before{
+    left:15%;
+}
+
+.section_title h2::after{
+    right:15%;
+}
+
+.subtitle{
+    display:block;
+    font-family:"ヒラギノ角ゴシック","Hiragino Kaku Gothic ProN","メイリオ","Hiragino Sans",sans-serif;
+    font-weight:200;
+    font-size:0.5em;
+    color:#707070;
+}
+
+.pickup_contents{
+    width:70%;
+    margin:25px auto 75px auto;
+    background-color:#aadbc5;
+}
+
+.pickup_inner{
+    display:flex;
+    flex-wrap:wrap;
+    gap:30px;
+    justify-content:center;
+    padding:80px 0;
+}
+
+.pickup_item{
+    transition:all .3s;
+    position:relative;
+    width:calc(100%/2 - 100px);
+}
+
+.pickup_item:hover{
+    opacity:0.7;
+}
+
+.pickup_item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.pickup_title{
+    position:absolute;
+    background-color:rgba(112,112,112, 0.7);
+    display:block;
+    width:100%;
+    height:50px;
+    z-index:100;
+    bottom:0;
+    color:#fff;
+    padding:5px 10px;
+    font-weight:lighter;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/*campuslife--------------------*/
+
+.campuslife_contents{
+    background-image:url(../../images/namiki2.jpg);
+    background-size:cover;
+    font-size:16px;
+    width:100%;
+    padding:80px 0;
+    margin:10px auto 80px auto;
+}
+
+.interview{
+    width:50%;
+    padding:30px 40px 10px 40px;
+}
+
+.interview:nth-child(1){
+    margin-right:20%;
+}
+
+.interview img{
+    width:100%;
+    object-fit:cover;
+    filter: saturate(80%);
+    position:relative;
+    transition:all .5s;
+}
+
+.interview a{
+    display:inline-block;
+    width:60%;
+    position:absolute;
+    padding:30px 10px;
+    font-size:1.2em;
+    line-height:1.4em;
+    background-color:rgba(255, 255, 255, 0.9);
+}
+
+.interview:nth-child(2){
+    margin-left:50%;
+}
+
+.interview_tanaka{
+    object-position:95% 35%;
+}
+
+.interview_yamada{
+    object-position:80% 0;
+}
+
+.interview a{
+    position:absolute;
+    z-index:20;
+    bottom:5px;
+    transition:all .5s;
+}
+
+.interview a:hover{
+    background-color:#aadbc5;
+    opacity:0.8;
+}
+
+.interview:nth-child(1) a{
+    left:0;
+    text-align:right;
+}
+
+.interview:nth-child(2) a{
+    right:0;
+}
+
+.interview img:hover{
+    filter: saturate(110%) brightness(110%);
+    cursor:pointer;
+}
+
+/*gakubu-------------------------*/
+
+#gakubu{
+    width:100%;
+}
+
+.gakubu{
+    max-width:70%;
+    padding:30px 80px;
+    margin:80px auto;
+}
+
+.gakubu_inner{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:35px 15px;
+}
+
+.gakubu_list{
+    display:inline;
+    position:relative;
+    width:calc(100%/2 - 30px);
+    transition:all .5s;
+}
+
+
+.gakubu_list_img{
+    width:100%;
+}
+
+.gakubu_list_title{
+    position:absolute;
+    background-color:rgba(255, 255, 255, 0.9);
+    font-size:1.1em;
+    bottom:0;
+    right:100px;
+    display:inline-block;
+    width:calc(100% - 100px);
+    padding:10px 0;
+    text-align:center;
+}
+
+.gakubu_list:nth-child(2n+1) .gakubu_list_title{
+    right:0;
+    left:100px;
+}
+
+.gakubu_list:hover{
+    opacity:0.7;
+}
+
+/*news-------------------------*/
+
+#news .section_title{
+    margin-bottom:30px;
+}
+
+.news_inner{
+    background-image:url(../../images/background02.jpg);
+    width:100%;
+    background-size:cover;
+    padding:40px 0;
+}
+
+.news_list{
+    background-color: #fff;
+    margin:80px auto;
+    max-width:60%;
+    padding:10px 30px;
+}
+
+.news_list_table{
+    display:flex;
+    margin:30px 0;
+    border-bottom:solid 1px #707070;
+    padding:10px 40px;
+}
+
+.news_list_table:last-child{
+    border-bottom:none;
+    padding-bottom:20px;
+}
+
+
+.news_link{
+    transition:all .3s;
+}
+
+.news_list:first-child{
+    padding-top:20px;
+}
+
+.news_link:hover{
+    opacity:0.5;
+}
+
+.news_date{
+    color:#2D6C53;
+    padding-right:50px;
+}
+
+.news_text{
+    font-weight:lighter;
+}
+
+.news_button{
+    background-color:#2D6C53;
+    color:#fff;
+    padding:15px 0;
+    transition:all .5s;
+    display:block;
+    text-align:center;
+    width:200px;
+    margin:40px auto;
+}
+
+.news_button:hover{
+    background-color:#45a27d;
+    color:#dedede;
+}
+
+
+/*photogallery------------------*/
+
+#photo_gallery{
+    margin:240px 176px 200px 176px;
+}
+
+.gallery_images{
+    background-color:#aadbc5;
+    width:100%;
+    display:flex;
+}
+
+.gallery_right{
+    display:flex;
+    flex-wrap:wrap;
+    width:70%;
+}
+
+.gallery_right_items:nth-child(1){
+    max-width:100%;
+    object-fit:cover;
+    padding:30px;
+    position:relative;
+    bottom:5%;
+    left:-20%;
+}
+
+
+.gallery_right_items:nth-child(2){
+    max-width:90%;
+    height:auto;
+    object-fit:cover; 
+    position: relative;
+    left: 20%;
+    bottom: 5%;
+   
+}
+
+.gallery_left{
+    width:30%;
+}
+
+.gallery_left_items{
+    width:100%;
+    height:auto;
+    object-fit:cover;
+    position:relative;
+    left:50px;
+    top:200px;
+}
+
+/*links------------------------*/
+
+
+#links{
+    width:80%;
+    margin:50px auto 220px auto;
+}
+
+.link_list{
+    width:100%;
+    display:flex;
+    gap:15px 0;
+    flex-wrap:wrap;
+    text-align:center;
+}
+
+.link_item{
+    padding:15px 5px;
+    width:calc(100%/3);
+    margin:0 auto;
+}
+
+.link_img{
+    width:90%;
+    object-fit: cover;
+    border:solid 1px #707070;
+}
+
+/*footer-------------------------*/
+
+#footer{
+    position:relative;
+    z-index:99999;
+    font-family:"ヒラギノ角ゴシック","Hiragino Kaku Gothic ProN","メイリオ","Hiragino Sans",sans-serif;
+    background-color:#e0e0e0;
+    width:100%;
+    margin:110px auto 0 auto;
+}
+
+#footer #sp{
+    display:none;
+}
+
+.footer_contents{
+    width:70%;
+    margin:0 auto;
+}
+
+.footer_nav{
+    margin:0 5%;
+}
+
+.footer_logo img{
+    width:20%;
+    margin:50px 0;
+}
+
+.footer_nav_inner{
+    margin-bottom:50px;
+    width:calc(100%/3);
+}
+
+.footer_nav_flex{
+    padding-bottom:10px;
+    max-width:250px;
+}
+
+.footer_nav_flex b{
+    display:block;
+    padding-bottom:10px;
+    font-size:18px;
+    border-bottom:1px solid #222222;
+}
+
+.open .footer_nav_list.open{
+    display:block;
+}
+
+.footer_nav_list{
+    font-weight:200;
+    margin:15px 0;
+}
+
+.footer_nav{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.footer_nav_link{
+    transition:all .3s;
+}
+
+.footer_nav_link:hover{
+    color:#2D6C53;
+}
+
+.footer_nav_map{
+    margin:0 5%;
+    padding-bottom:20px;
+}
+
+.footer_nav_map ul{
+    display:flex;
+    justify-content:center;
+}
+
+.footer_nav_map a{
+    padding:0 50px;
+    font-weight:200;
+    transition:all;
+}
+
+.footer_nav_map a:active{
+    color:#2D6C53;
+}
+
+
+.footer_nav_map li:nth-child(1) a{
+    padding-left:0;
+}
+
+.footer_nav_map li:nth-child(2){
+    border-right:1px solid #707070;
+    border-left:1px solid #707070;
+}
+
+.sp_footer_icon{
+    display:none;
+}
+
+.copy{
+    font-family:sans-serif;
+    color:#c7c7c7;
+    font-size:12px;
+    text-align:center;
+    background-color:#fff;
+    padding:40px 0;
+}
+
+
+
+
+
+
+/*animation----------*/
+
+
+.fadeUp{
+    animation-name:fadeUpAnime;
+    animation-duration:2s;
+    animation-fill-mode:forwards;
+    opacity:0;
+}
+
+@keyframes fadeUpAnime{
+    from{
+        opacity:0;
+        transform:translateY(50vh);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.fadeup,.fadeleft,.faderight,.fadein{
+    opacity:0
+}
+
+
+
+.fadeLeft{
+    animation-name:fadeLeftAnime;
+    animation-duration:3s;
+    animation-fill-mode:forwards;
+    opacity:0;
+    }
+    
+    @keyframes fadeLeftAnime{
+      from {
+        opacity: 0;
+      transform: translateX(-100px);
+      }
+    
+      to {
+        opacity: 1;
+      transform: translateX(0);
+      }
+    }
+    .fadeRight{
+        animation-name:fadeRightAnime;
+        animation-duration:3s;
+        animation-fill-mode:forwards;
+        opacity:0;
+        }
+        
+        @keyframes fadeRightAnime{
+          from {
+            opacity: 0;
+          transform: translateX(100px);
+          }
+        
+          to {
+            opacity: 1;
+          transform: translateX(0);
+          }
+        }
+    
+    .fadeIn{
+        animation-name:fadeInAnime;
+        animation-duration:1s;
+        animation-fill-mode:forwards;
+        opacity:0;
+    }
+
+    @keyframes fadeInAnime{
+        from {
+          opacity: 0;
+        }
+      
+        to {
+          opacity: 1;
+        }
+      }
+        
